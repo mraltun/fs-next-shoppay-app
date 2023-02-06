@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import persistStore from "redux-persist";
+import { persistStore } from "redux-persist";
 import store from "@/store";
 import "@/styles/globals.scss";
 
