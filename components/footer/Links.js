@@ -1,7 +1,25 @@
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 export default function Links() {
-  return <div>Links</div>;
+  return (
+    <div className={styles.footer__links}>
+      {links.map((link, i) => (
+        <ul>
+          {i === 0 ? (
+            <img src='../../../logo.png' alt='' />
+          ) : (
+            <b>{link.heading}</b>
+          )}
+          {link.links.map((link) => (
+            <li>
+              <Link href={link.link}>{link.name}</Link>
+            </li>
+          ))}
+        </ul>
+      ))}
+    </div>
+  );
 }
 
 const links = [
