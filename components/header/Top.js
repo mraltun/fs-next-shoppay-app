@@ -6,7 +6,7 @@ import { MdSecurity } from "react-icons/md";
 import { BsSuitHeart } from "react-icons/bs";
 import { RiAccountPinCircleLine, RiArrowDropDownFill } from "react-icons/ri";
 
-export default function Top() {
+export default function Top({ country }) {
   const [loggedIn, setLoggedIn] = useState(true);
   const [visible, setVisible] = useState(false);
 
@@ -16,11 +16,8 @@ export default function Top() {
         <div></div>
         <ul className={styles.top__list}>
           <li className={styles.li}>
-            <img
-              src='https://www.seekpng.com/png/full/1010-10107808_-soloveika-free-christmas-train.png'
-              alt=''
-            />
-            <span>Turkiye / USD</span>
+            <img src={country.flag} alt='' />
+            <span>{country.name} / USD</span>
           </li>
           <li className={styles.li}>
             <MdSecurity />

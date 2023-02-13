@@ -38,7 +38,7 @@ export default function Copyright({ country }) {
           ))}
           <li>
             <a>
-              <IoLocationSharp /> Turkiye
+              <IoLocationSharp /> {country.name}
             </a>
           </li>
         </ul>
